@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
 import Loader from 'react-js-loader';
-
+import removeMd from 'remove-markdown';
 import Navbar from '../components/Navbar';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
@@ -134,7 +134,7 @@ const QuizPage = () => {
               type="spinner-cub"
               bgColor={'#000000'}
               color={'#FFFFFF'}
-              title={'spinner-cub'}
+              // title={'spinner-cub'}
               size={100}
             />
           </div>
@@ -142,7 +142,7 @@ const QuizPage = () => {
           result && (
             <div className="mt-6 p-4 bg-gray-100 rounded-lg">
               <h2 className="text-xl font-semibold mb-4">Analysis Result</h2>
-              <p className="whitespace-pre-wrap">{result}</p>
+              <p className="whitespace-pre-wrap">{removeMd(result)}</p>
             </div>
           )
         )}

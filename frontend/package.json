@@ -39,6 +39,7 @@
     "react-scripts": "5.0.1",
     "react-toastify": "^11.0.5",
     "redux": "^5.0.1",
+    "remove-markdown": "^0.6.2",
     "socket.io-client": "^4.7.5",
     "web-vitals": "^2.1.4"
   },
